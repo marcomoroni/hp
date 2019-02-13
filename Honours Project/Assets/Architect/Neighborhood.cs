@@ -4,21 +4,10 @@ using UnityEngine;
 
 namespace Architect
 {
-	public class Neighborhood
+	[AddComponentMenu("Architect/Neighborhood")]
+	public class Neighborhood : MonoBehaviour
 	{
-		public City City { get; }
-
-		public List<Structure> structures = new List<Structure>();
-
-		public Neighborhood(City city)
-		{
-			City = city;
-		}
-
-		public void Generate()
-		{
-
-		}
+		public City city;
 	}
 
 }

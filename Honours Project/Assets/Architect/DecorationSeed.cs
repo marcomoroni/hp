@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Architect/DecorationSeed")]
 public class DecorationSeed : MonoBehaviour
 {
-	// Location or decoration type?
 
-	public bool rooftop;
 }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 namespace Architect
 {
-	public class City
+	[AddComponentMenu("Architect/City")]
+	public class City : MonoBehaviour
 	{
-		//public static readonly float unitSize = 
+		[Header("Properties")]
+		[Tooltip("Leave it null to create random properties.")]
+		public CityProperties properties;
 
-		CityProperties properties;
+		[Header("Prefabs")]
+		public GameObject neighborhood;
 
 		public void Generate()
 		{

@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-public class Block : MonoBehaviour
+namespace Architect
 {
-	public int width = 2;
-	public int height = 2;
+	[RequireComponent(typeof(SpriteRenderer)), AddComponentMenu("Architect/Block")]
+	public class Block : MonoBehaviour
+	{
+		public int width = 2;
+		public int height = 2;
+	}
 }
