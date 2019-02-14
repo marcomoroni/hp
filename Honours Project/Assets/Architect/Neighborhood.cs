@@ -85,14 +85,16 @@ namespace Architect
 		{
 			if (properties != null)
 			{
+				float makeBigger = 0.2f;
+
 				Gizmos.color = new Color(1, 0.5f, 0);
 
-				float actualWidth = properties.width * (float)City.pixelsPerUnit / 100;
-				float actualMinHeight = properties.minHeight * (float)City.pixelsPerUnit / 100;
-				float actualMaxHeight = properties.maxHeight * (float)City.pixelsPerUnit / 100;
+				float actualWidth = properties.width * (float)City.pixelsPerUnit / 100 + makeBigger;
+				float actualMinHeight = properties.minHeight * (float)City.pixelsPerUnit / 100 + makeBigger;
+				float actualMaxHeight = properties.maxHeight * (float)City.pixelsPerUnit / 100 + makeBigger;
 
-				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMinHeight / 2), new Vector3(actualWidth, actualMinHeight, 0));
-				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMaxHeight / 2), new Vector3(actualWidth, actualMaxHeight, 0));
+				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMinHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualMinHeight, 0));
+				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMaxHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualMaxHeight, 0));
 			}
 		}
 	}
