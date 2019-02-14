@@ -34,7 +34,6 @@ namespace Architect
 			}
 
 			// TEMP: Generate 1 neighborhood
-			Debug.Log("Generating city");
 			CreateNeighborhood();
 		}
 
