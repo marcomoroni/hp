@@ -12,7 +12,10 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject structurePrefab;
 
+		/*//public List<T> elements;
+		public List<List<double>> transitionMatrix; // The probabilty of each row must sum to 1.0
 		private int currentLenght = 0;
+		//public List<T> cannotEndWith = new List<T>();*/
 
 		// Generate as a Markov chain
 		public void Generate()
