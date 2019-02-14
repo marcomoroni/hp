@@ -4,22 +4,15 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-public class MarkovChain<T> // T has to be an enum
+public class MarkovChain<T> : IEnumerable<T> // T has to be an enum
 {
 	private List<T> elements;
 	private List<List<double>> transitionMatrix; // The probabilty of each row must sum to 1.0
 
 	private List<T> chain = new List<T>();
 
-	public T this[int i]
-	{
-		get { return chain[i]; }
-	}
-
-	public int Count
-	{
-		get { return chain.Count; }
-	}
+	public T this[int i] { get { return chain[i]; } }
+	public int Count { get { return chain.Count; } }
 
 	public MarkovChain() { }
 
@@ -64,4 +57,20 @@ public class MarkovChain<T> // T has to be an enum
 
 		return chain[chain.Count - 1];
 	}
+
+	public List<T> GenerateNext(int newElements)
+	{
+		List<T> output = new List<T>();
+
+		for (int i = 0; i < newElements; i++)
+		{
+			output.Add(GenerateNext());
+		}
+
+		return output;
+	}
+
+	public IEnumerator<T> GetEnumerator() { return chain.GetEnumerator(); }
+
+	IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 }
