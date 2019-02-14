@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6927694988181764599
+--- !u!1 &4761882132677523643
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6647246958706674387}
-  - component: {fileID: 3209405949922726290}
+  - component: {fileID: 2927578731443062689}
+  - component: {fileID: 962163500240100888}
   m_Layer: 0
-  m_Name: DecorationSeed
+  m_Name: Neighborhood
   m_TagString: Untagged
-  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6647246958706674387
+--- !u!4 &2927578731443062689
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6927694988181764599}
+  m_GameObject: {fileID: 4761882132677523643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,15 +31,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3209405949922726290
+--- !u!114 &962163500240100888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6927694988181764599}
+  m_GameObject: {fileID: 4761882132677523643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5189fadc85d298f4bba14a6a9c25dc96, type: 3}
+  m_Script: {fileID: 11500000, guid: 5316bf8297c7cd242ae4cc87eaf2f3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  structurePrefab: {fileID: 685471422960958271, guid: e236eccb9a20a75448f707dd9f0813f3,
+    type: 3}

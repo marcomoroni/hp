@@ -7,40 +7,17 @@ namespace Architect
 	[AddComponentMenu("Architect/Structure")]
 	public class Structure : MonoBehaviour
 	{
-		//List<GameObject> blocks = new List<GameObject>();
+		public StructureProperties properties;
 
-		enum BlockType
-		{
-			Normal,
-			Roof,
-			Fundation,
-			Bridge
-		}
-
-		struct BlockSymbol
-		{
-			public BlockType blockType;
-			public int height;
-
-			public BlockSymbol(BlockType blockType, int height)
-			{
-				this.blockType = blockType;
-				this.height = height;
-			}
-		}
-
-		public StructureProperties structureProperties;
-
-		List<BlockSymbol> symbols = new List<BlockSymbol>();
-
+		// Generate as an L-system
 		public void Generate()
 		{
-			
+			Debug.Log("Generating structure");
 		}
-	}
 
-	public class StructureProperties
-	{
-		public int height = 1;
+		/*private (GameObject, Block) CreateBlock()
+		{
+
+		}*/
 	}
 }
