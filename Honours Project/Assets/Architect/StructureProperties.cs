@@ -11,8 +11,8 @@ namespace Architect
 
 		public StructureProperties(NeighborhoodProperties neighborhoodProperties)
 		{
-			height = Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight);
-			width = Random.Range(1, 5);
+			height = Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
+			width = Random.Range(1, 2 + 1);
 		}
 	}
 }

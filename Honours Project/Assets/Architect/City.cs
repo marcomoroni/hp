@@ -14,7 +14,7 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject neighborhoodPrefab;
 
-		public static readonly int pixelsPerUnit = 64;
+		public static readonly int pixelsPerUnit = 100;
 
 		private void Update()
 		{

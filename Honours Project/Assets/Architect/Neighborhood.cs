@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Architect
 {
@@ -12,27 +13,94 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject structurePrefab;
 
-		/*//public List<T> elements;
+		private enum StructureType
+		{
+			Start,
+			Normal,
+			Bridge,
+			//BridgeWithMoreOnTop,
+			Empty
+		}
+
 		public List<List<double>> transitionMatrix; // The probabilty of each row must sum to 1.0
-		private int currentLenght = 0;
-		//public List<T> cannotEndWith = new List<T>();*/
+
+		//private int currentLenght = 0;
+		private List<StructureType> cannotEndWith = new List<StructureType>()
+		{
+			StructureType.Bridge
+		};
+
+		private List<StructureProperties> structures = new List<StructureProperties>();
+
+		public int CurrentLenght
+		{
+			get
+			{
+				return structures.Sum(s => s.width);
+			}
+		}
 
 		// Generate as a Markov chain
 		public void Generate()
 		{
 			Debug.Log("Generating neighborhood");
-			CreateStructure();
+			//CreateStructure();
+
+			// Create transition matrix
+			List<List<double>> transitionMatrix = CreateTranstionMatrix();
+
+			MarkovChain<StructureType> structureChain = new MarkovChain<StructureType>(transitionMatrix);
+
+			// Generate until lenght is surpassed and has valid ending
+			do
+			{
+				StructureType newStructureType = structureChain.GenerateNext(); // Not using this for now. Will affect CreateStructure()
+
+				var newStructure = CreateStructure(newStructureType, CurrentLenght);
+				structures.Add(newStructure.Item2.properties);
+
+				Debug.Log("Current lenght: " + CurrentLenght + ", last: " + newStructureType);
+			}
+			while (CurrentLenght <= properties.length || cannotEndWith.Contains(structureChain[structureChain.Count - 1]));
 		}
 
-		public (GameObject, Structure) CreateStructure()
+		private List<List<double>> CreateTranstionMatrix()
 		{
-			GameObject go = Instantiate(structurePrefab, transform.position, transform.rotation);
+			List<List<double>> output = new List<List<double>>()
+			{
+				new List<double>() {0.0f, 1.0f, 0.0f, 0.0f},
+				new List<double>() {0.0f, 0.6f, 0.2f, 0.2f},
+				new List<double>() {0.0f, 1.0f, 0.0f, 0.0f},
+				new List<double>() {0.0f, 0.9f, 0.0f, 0.1f}
+			};
+
+			return output;
+		}
+
+		private (GameObject, Structure) CreateStructure(StructureType type, int pos)
+		{
+			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + pos * (float)City.pixelsPerUnit / 100), transform.rotation);
 			go.name = structurePrefab.name;
 			Structure structure = go.GetComponent<Structure>();
 			structure.properties = new StructureProperties(properties);
 			structure.Generate();
 
 			return (go, structure);
+		}
+
+		private void OnDrawGizmos()
+		{
+			if (properties != null)
+			{
+				Gizmos.color = new Color(1, 0.5f, 0);
+
+				float actualLenght = properties.length * (float)City.pixelsPerUnit / 100;
+				float actualMinHeight = properties.minHeight * (float)City.pixelsPerUnit / 100;
+				float actualMaxHeight = properties.maxHeight * (float)City.pixelsPerUnit / 100;
+
+				Gizmos.DrawWireCube(transform.position + new Vector3(actualLenght / 2, actualMinHeight / 2), new Vector3(actualLenght, actualMinHeight, 0));
+				Gizmos.DrawWireCube(transform.position + new Vector3(actualLenght / 2, actualMaxHeight / 2), new Vector3(actualLenght, actualMaxHeight, 0));
+			}
 		}
 	}
 }
