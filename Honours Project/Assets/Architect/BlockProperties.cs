@@ -9,7 +9,7 @@ namespace Architect
 	{
 		//public Sprite sprite; // TEMP
 		public int width;
-		public float height;
+		public int height;
 		public List<Style> styles = new List<Style>();
 	}
 

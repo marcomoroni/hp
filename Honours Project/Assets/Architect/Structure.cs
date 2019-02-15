@@ -13,8 +13,6 @@ namespace Architect
 		// Generate as an L-system
 		public void Generate()
 		{
-			Debug.Log("Generating structure");
-
 			// Load all blocks (maybe move it in city or somewhere else with a satic method)
 			Object[] blockPVs = Resources.LoadAll("Blocks");
 
@@ -41,7 +39,7 @@ namespace Architect
 				GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(candidateChosen);
 				go.name = ((GameObject)candidateChosen).name;
 				go.transform.parent = this.gameObject.transform;
-				go.transform.position = go.transform.parent.transform.position + new Vector3(0, posY * (float)City.pixelsPerUnit / 100, 0);
+				go.transform.position = go.transform.parent.transform.position + new Vector3(0, posY * (float)City.pixelsPerCityUnit / 100, 0);
 				Block block = go.GetComponent<Block>();
 
 				return (go, block);
@@ -56,8 +54,8 @@ namespace Architect
 			{
 				Gizmos.color = new Color(1, 1, 0);
 
-				float actualWidth = properties.width * (float)City.pixelsPerUnit / 100;
-				float actualHeight = properties.height * (float)City.pixelsPerUnit / 100;
+				float actualWidth = properties.width * (float)City.pixelsPerCityUnit / 100;
+				float actualHeight = (float)properties.height / 100;
 
 				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2), new Vector3(actualWidth, actualHeight, 0));
 			}

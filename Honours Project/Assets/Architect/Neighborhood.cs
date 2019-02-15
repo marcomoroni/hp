@@ -72,7 +72,7 @@ namespace Architect
 
 		private (GameObject, Structure) CreateStructure(StructureType type, int pos)
 		{
-			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + pos * (float)City.pixelsPerUnit / 100), transform.rotation);
+			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + pos * (float)City.pixelsPerCityUnit / 100), transform.rotation);
 			go.name = structurePrefab.name;
 			Structure structure = go.GetComponent<Structure>();
 			structure.properties = new StructureProperties(properties);
@@ -89,9 +89,9 @@ namespace Architect
 
 				Gizmos.color = new Color(1, 0.5f, 0);
 
-				float actualWidth = properties.width * (float)City.pixelsPerUnit / 100 + makeBigger;
-				float actualMinHeight = properties.minHeight * (float)City.pixelsPerUnit / 100 + makeBigger;
-				float actualMaxHeight = properties.maxHeight * (float)City.pixelsPerUnit / 100 + makeBigger;
+				float actualWidth = properties.width * (float)City.pixelsPerCityUnit / 100 + makeBigger;
+				float actualMinHeight = (float)properties.minHeight / 100 + makeBigger;
+				float actualMaxHeight = (float)properties.maxHeight / 100 + makeBigger;
 
 				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMinHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualMinHeight, 0));
 				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualMaxHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualMaxHeight, 0));

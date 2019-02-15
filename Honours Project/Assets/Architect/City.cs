@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+// Heights are in pixels (1 px = 1/100 Unity unit)
+// Widths are pixelsPerUnit wide
+
 namespace Architect
 {
 	[AddComponentMenu("Architect/City")]
@@ -15,7 +18,7 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject neighborhoodPrefab;
 
-		public static readonly int pixelsPerUnit = 64; // Divide by 100 (Unity unit size) when using for translation
+		public static readonly int pixelsPerCityUnit = 64; // Divide by 100 (Unity unit size) when using for translation
 
 		private void Update()
 		{

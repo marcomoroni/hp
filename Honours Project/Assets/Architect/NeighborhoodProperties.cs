@@ -8,8 +8,8 @@ namespace Architect
 	public class NeighborhoodProperties
 	{
 		public int width;
-		public float minHeight;
-		public float maxHeight;
+		public int minHeight;
+		public int maxHeight;
 
 		public NeighborhoodProperties(CityProperties cityProperties)
 		{
