@@ -5,9 +5,9 @@ using System;
 
 public class LSystem<S> : IEnumerable<S>
 {
-	List<S> production = new List<S>();
-	public int Count { get { return production.Count; } }
-	public S this[int i] { get { return production[i]; } }
+	List<S> derivation = new List<S>();
+	public int Count { get { return derivation.Count; } }
+	public S this[int i] { get { return derivation[i]; } }
 
 	List<S> symbols;
 	Dictionary<S, Func<List<S>>> rules = new Dictionary<S, Func<List<S>>>();
@@ -15,7 +15,7 @@ public class LSystem<S> : IEnumerable<S>
 	public LSystem(List<S> symbols, List<S> axioms)
 	{
 		this.symbols = symbols;
-		production.AddRange(axioms);
+		derivation.AddRange(axioms);
 	}
 
 	public void AddRule(S symbol, Func<List<S>> rule)
@@ -24,12 +24,14 @@ public class LSystem<S> : IEnumerable<S>
 		rules[symbol] = rule;
 	}
 
-	// Expand once
+	/// <summary>
+	/// Expand this derivation once.
+	/// </summary>
 	public void Expand()
 	{
 		List<S> newProduction = new List<S>();
 
-		foreach (var symbol in production)
+		foreach (var symbol in derivation)
 		{
 			// If there's a rule expand the symbol, else add the same symbol
 			if (rules.ContainsKey(symbol))
@@ -42,10 +44,26 @@ public class LSystem<S> : IEnumerable<S>
 			}
 		}
 
-		production = new List<S>(newProduction);
+		derivation = new List<S>(newProduction);
 	}
 
-	public IEnumerator<S> GetEnumerator() { return production.GetEnumerator(); }
+	/// <summary>
+	/// Check whether the derivation has non-terminal symbols.
+	/// </summary>
+	public bool CanBeExpanded()
+	{
+		foreach (var symbol in derivation)
+		{
+			if (rules.ContainsKey(symbol))
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public IEnumerator<S> GetEnumerator() { return derivation.GetEnumerator(); }
 
 	IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 }
