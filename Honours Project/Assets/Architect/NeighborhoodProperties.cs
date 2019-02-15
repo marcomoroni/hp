@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace Architect
 {
+	[System.Serializable]
 	public class NeighborhoodProperties
 	{
 		public int width;
-		public int minHeight;
-		public int maxHeight;
+		public float minHeight;
+		public float maxHeight;
 
 		public NeighborhoodProperties(CityProperties cityProperties)
 		{

@@ -21,7 +21,7 @@ namespace Architect
 			CreateBlock(0, blockPVs);
 		}
 
-		private (GameObject, Block) CreateBlock(int posY, Object[] blockPVs)
+		private (GameObject, Block) CreateBlock(float posY, Object[] blockPVs)
 		{
 			List<Object> validCandidates = new List<Object>();
 

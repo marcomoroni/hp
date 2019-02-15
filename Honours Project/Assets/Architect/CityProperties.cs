@@ -9,8 +9,8 @@ namespace Architect
 	{
 		public int minWidth = 3;
 		public int maxWidth = 10;
-		public int minHeight = 6;
-		public int maxHeight = 12;
+		public float minHeight = 6f;
+		public float maxHeight = 12f;
 		public Color color1 = Color.cyan;
 
 		public void Randomize()
