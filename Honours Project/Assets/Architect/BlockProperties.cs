@@ -8,7 +8,9 @@ namespace Architect
 	public class BlockProperties
 	{
 		//public Sprite sprite; // TEMP
+		[Tooltip("In city units.")]
 		public int width;
+		[Tooltip("In pixels.")]
 		public int height;
 		public List<Style> styles = new List<Style>();
 	}
