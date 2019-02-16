@@ -11,6 +11,11 @@ namespace Architect
 	{
 		public BlockProperties properties;
 
+
+
+
+
+
 		// Maybe shouldn't be in this class :/
 		[MenuItem("Assets/Create/Architect/Block", priority = 2)]
 		static void CreateBlockPrefab(MenuCommand menuCommand)

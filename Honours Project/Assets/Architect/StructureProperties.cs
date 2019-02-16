@@ -10,7 +10,9 @@ namespace Architect
 		public int height;
 		public int width;
 
-		public StructureProperties(NeighborhoodProperties neighborhoodProperties)
+		
+
+		public StructureProperties(NeighborhoodProperties neighborhoodProperties, StructureType structureType)
 		{
 			height = Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
 			width = Random.Range(1, 2 + 1);

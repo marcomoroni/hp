@@ -16,6 +16,7 @@ namespace Architect
 		[Tooltip("In pixels.")]
 		public int maxHeight = 700;
 		public Color color1 = Color.cyan; // TEMP
+		public ArchitecturalStyle style;
 
 		public void Randomize()
 		{

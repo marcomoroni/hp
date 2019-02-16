@@ -7,17 +7,13 @@ namespace Architect
 	[System.Serializable]
 	public class BlockProperties
 	{
-		//public Sprite sprite; // TEMP
+		public BlockCategory category;
+
 		[Tooltip("In city units.")]
 		public int width;
 		[Tooltip("In pixels.")]
 		public int height;
-		public List<Style> styles = new List<Style>();
-	}
 
-	public enum Style
-	{
-		Style1,
-		Style2
+		public List<ArchitecturalStyle> styles = new List<ArchitecturalStyle>();
 	}
 }

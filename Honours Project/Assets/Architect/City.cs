@@ -20,12 +20,9 @@ namespace Architect
 
 		public static readonly int pixelsPerCityUnit = 64; // Divide by 100 (Unity unit size) when using for translation
 
-		private void Update()
+		private void Start()
 		{
-			if (Input.GetKeyDown("space"))
-			{
-				Generate();
-			}
+			Generate();
 		}
 
 		public void Generate()
@@ -62,5 +59,26 @@ namespace Architect
 			Undo.RegisterCreatedObjectUndo(newCity, "Create " + newCity.name);
 			Selection.activeObject = newCity;
 		}
+	}
+
+	public enum StructureType
+	{
+		Start,
+		Generic,
+		Bridge,
+		//BridgeWithMoreOnTop,
+		Empty
+	}
+
+	public enum BlockCategory
+	{
+		Generic,
+		Roof
+	}
+
+	public enum ArchitecturalStyle
+	{
+		Style1,
+		Style2
 	}
 }
