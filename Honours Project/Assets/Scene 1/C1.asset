@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minWidth: 5
   maxWidth: 5
-  minHeight: 600
-  maxHeight: 717
+  minHeight: 300
+  maxHeight: 700
   color1: {r: 0.31389585, g: 0.058785684, b: 0.2618513, a: 1}
+  style: 0

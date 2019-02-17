@@ -46,6 +46,11 @@ namespace Architect
 			return null;
 		}
 
+		public static BlockProperties GetPropertiesOfBlockPV(Object pv)
+		{
+			return ((GameObject)pv).GetComponent<Block>().properties;
+		}
+
 		#region Editor
 
 		[MenuItem("GameObject/Architect/City", priority = 1)]
@@ -96,4 +101,50 @@ namespace Architect
 		Style1,
 		Style2
 	}
+
+	#region Symbols for structure L-System
+
+	public abstract class SLS_Symbol { }
+
+	public abstract class SLS_TerminalSymbol : SLS_Symbol
+	{
+		// Conceptually different for terminal definition: for this implementation,
+		// terminals must have a block to calculate height
+
+		public UnityEngine.Object BlockPrefabVariant { get; set; }
+	}
+	public abstract class SLS_EmptyTerminalSymbol : SLS_Symbol
+	{
+		public int heigth { get; set; }
+	}
+
+	////////////////////
+
+	class SLS_F_Roof : SLS_TerminalSymbol
+	{
+		public SLS_F_Roof(StructureProperties properties)
+		{
+			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Roof);
+		}
+	}
+
+	class SLS_F_Generic : SLS_TerminalSymbol
+	{
+		public SLS_F_Generic(StructureProperties properties)
+		{
+			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Generic);
+		}
+	}
+
+	class SLS_InsertGeneric : SLS_Symbol { }
+
+	class SLS_T_Empty : SLS_EmptyTerminalSymbol
+	{
+		public SLS_T_Empty(int height)
+		{
+			this.heigth = height;
+		}
+	}
+
+	#endregion
 }
