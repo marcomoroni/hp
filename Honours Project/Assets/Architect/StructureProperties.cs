@@ -19,11 +19,28 @@ namespace Architect
 		{
 			height = UnityEngine.Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
 			//width = UnityEngine.Random.Range(1, 3 + 1);
-			width = ArchitectTools.PossibleWidths[UnityEngine.Random.Range(0, 3)]; // TEMP
+			if (structureType == StructureType.Empty)
+			{
+				width = UnityEngine.Random.Range(10, 30 + 1); // TEMP
+			}
+			else
+			{
+				width = ArchitectTools.PossibleWidths[UnityEngine.Random.Range(0, 3)]; // TEMP
+			}
 
 			// Create L-System properties
-			axioms.Add(new SLS_InsertGeneric());
-			axioms.Add(new SLS_F_Roof(this));
+			switch (structureType)
+			{
+				case StructureType.Generic:
+					axioms.Add(new SLS_InsertGeneric());
+					axioms.Add(new SLS_F_Roof(this));
+					break;
+
+				case StructureType.Bridge:
+					axioms.Add(new SLS_T_Empty(70));
+					axioms.Add(new SLS_F_Generic(this));
+					break;
+			}
 
 			// Create rules
 			rules[typeof(SLS_InsertGeneric)] = () =>

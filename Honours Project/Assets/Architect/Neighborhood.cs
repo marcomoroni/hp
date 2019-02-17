@@ -30,8 +30,12 @@ namespace Architect
 			{
 				StructureType newStructureType = structureChain.GenerateNext(); // Not using this for now. Will affect CreateStructure()
 
-				var newStructure = CreateStructure(newStructureType, CurrentLenght);
-				structures.Add(newStructure.Item2.properties);
+				// Ignore StructureType.Start
+				if (newStructureType != StructureType.Start)
+				{
+					var newStructure = CreateStructure(newStructureType, CurrentLenght);
+					structures.Add(newStructure.Item2.properties);
+				}
 			}
 			while (CurrentLenght <= properties.width || properties.cannotEndWith.Contains(structureChain[structureChain.Count - 1]));
 		}

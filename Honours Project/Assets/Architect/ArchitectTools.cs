@@ -41,6 +41,7 @@ namespace Architect
 				return candidateChosen;
 			}
 
+			Debug.LogWarning("Cannot find a block with required properties.");
 			return null;
 		}
 

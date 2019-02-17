@@ -51,7 +51,7 @@ public class LSystem<S> : IEnumerable<S>
 	/// <summary>
 	/// Check whether the derivation has non-terminal symbols.
 	/// </summary>
-	public bool CanBeExpanded()
+	public bool CanBeExpanded() //[?]
 	{
 		foreach (var symbol in derivation)
 		{

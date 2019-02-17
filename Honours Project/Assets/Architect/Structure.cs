@@ -35,7 +35,8 @@ namespace Architect
 			LSystem<SLS_Symbol> blocksLSystem = new LSystem<SLS_Symbol>(properties.axioms, properties.rules);
 
 			// Expand until structure height is reached
-			while (GetTotalHeight(blocksLSystem) < properties.height)
+			// TODO: CAREFUL: Changes may lead to infinite loop
+			while (GetTotalHeight(blocksLSystem) < properties.height && blocksLSystem.CanBeExpanded())
 			{
 				blocksLSystem.Expand();
 			}
@@ -54,6 +55,10 @@ namespace Architect
 					case SLS_TerminalSymbol ts:
 						var newBlock = CreateBlock(ts.BlockPrefabVariant, currentHeight);
 						currentHeight += newBlock.Item2.properties.height;
+						break;
+
+					case SLS_EmptyTerminalSymbol ts:
+						currentHeight += ts.height;
 						break;
 				}
 			}
