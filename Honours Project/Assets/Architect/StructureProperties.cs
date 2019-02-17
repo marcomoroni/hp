@@ -18,7 +18,7 @@ namespace Architect
 		public StructureProperties(NeighborhoodProperties neighborhoodProperties, StructureType structureType)
 		{
 			height = UnityEngine.Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
-			width = UnityEngine.Random.Range(1, 2 + 1);
+			width = UnityEngine.Random.Range(1, 3 + 1);
 
 			// Create L-System properties
 			axioms.Add(new SLS_InsertGeneric());
