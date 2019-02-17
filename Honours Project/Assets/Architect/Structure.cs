@@ -59,12 +59,12 @@ namespace Architect
 			}
 		}
 
-		private (GameObject, Block) CreateBlock(UnityEngine.Object blockPrefabVariant, float posY)
+		private (GameObject, Block) CreateBlock(UnityEngine.Object blockPrefabVariant, int posY)
 		{
 			GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(blockPrefabVariant);
 			go.name = ((GameObject)blockPrefabVariant).name;
 			go.transform.parent = this.gameObject.transform;
-			go.transform.position = go.transform.parent.transform.position + new Vector3(0, posY / 100, 0);
+			go.transform.position = go.transform.parent.transform.position + new Vector3(0, (float)posY / 100, 0);
 			Block block = go.GetComponent<Block>();
 
 			return (go, block);
@@ -76,7 +76,7 @@ namespace Architect
 			{
 				Gizmos.color = new Color(1, 1, 0);
 
-				float actualWidth = properties.width * (float)ArchitectTools.pixelsPerCityUnit / 100;
+				float actualWidth = (float)properties.width / 100;
 				float actualHeight = (float)properties.height / 100;
 
 				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2), new Vector3(actualWidth, actualHeight, 0));

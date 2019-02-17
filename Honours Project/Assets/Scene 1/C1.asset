@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4814a6a9023d349a59c72c33a934ba, type: 3}
   m_Name: C1
   m_EditorClassIdentifier: 
-  minWidth: 5
-  maxWidth: 5
+  minWidth: 600
+  maxWidth: 600
   minHeight: 300
   maxHeight: 700
   color1: {r: 0.31389585, g: 0.058785684, b: 0.2618513, a: 1}

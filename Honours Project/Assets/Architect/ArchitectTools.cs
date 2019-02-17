@@ -7,8 +7,6 @@ namespace Architect
 {
 	public static class ArchitectTools
 	{
-		public static readonly int pixelsPerCityUnit = 64; // Divide by 100 (Unity unit size) when using for translation
-
 		private static Object[] blockPVs;
 		public static Object[] BlockPVs
 		{
@@ -44,6 +42,20 @@ namespace Architect
 			}
 
 			return null;
+		}
+
+		private static int[] possibleWidths;
+		public static int[] PossibleWidths
+		{
+			get
+			{
+				if (possibleWidths == null)
+				{
+					// TEMP
+					possibleWidths = new int[] { 64, 64 * 2, 64 * 3};
+				}
+				return possibleWidths;
+			}
 		}
 
 		public static BlockProperties GetPropertiesOfBlockPV(Object pv)

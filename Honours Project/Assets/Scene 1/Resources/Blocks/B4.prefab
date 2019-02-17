@@ -12,10 +12,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: B4
       objectReference: {fileID: 0}
+    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300006, guid: 421735d81397048ac94ddc3b2c9ce53a,
+        type: 3}
+    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: properties.width
-      value: 2
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
@@ -76,27 +97,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300006, guid: 421735d81397048ac94ddc3b2c9ce53a,
-        type: 3}
-    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57725c0c9256bce4f9b3c0b92c894ff5, type: 3}

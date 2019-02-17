@@ -9,7 +9,7 @@ namespace Architect
 	{
 		public BlockCategory category;
 
-		[Tooltip("In city units.")]
+		[Tooltip("In pixels.")]
 		public int width;
 		[Tooltip("In pixels.")]
 		public int height;
