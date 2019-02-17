@@ -18,10 +18,11 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject neighborhoodPrefab;
 
-		public static readonly int pixelsPerCityUnit = 64; // Divide by 100 (Unity unit size) when using for translation
+
 
 		private void Start()
 		{
+
 			Generate();
 		}
 

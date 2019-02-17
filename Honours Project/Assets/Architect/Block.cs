@@ -41,7 +41,7 @@ namespace Architect
 
 					float makeBigger = -0f; // actually, make smaller
 
-					float actualWidth = properties.width * (float)City.pixelsPerCityUnit / 100 + makeBigger;
+					float actualWidth = properties.width * (float)ArchitectTools.pixelsPerCityUnit / 100 + makeBigger;
 					float actualHeight = (float)properties.height / 100 + makeBigger;
 
 					Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualHeight, 0));

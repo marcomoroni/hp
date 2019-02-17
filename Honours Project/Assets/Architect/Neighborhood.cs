@@ -38,7 +38,7 @@ namespace Architect
 
 		private (GameObject, Structure) CreateStructure(StructureType type, int pos)
 		{
-			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + pos * (float)City.pixelsPerCityUnit / 100), transform.rotation);
+			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + pos * (float)ArchitectTools.pixelsPerCityUnit / 100), transform.rotation);
 			go.name = structurePrefab.name;
 			Structure structure = go.GetComponent<Structure>();
 			structure.properties = new StructureProperties(properties, type);
@@ -55,7 +55,7 @@ namespace Architect
 
 				Gizmos.color = new Color(1, 0.5f, 0);
 
-				float actualWidth = properties.width * (float)City.pixelsPerCityUnit / 100 + makeBigger;
+				float actualWidth = properties.width * (float)ArchitectTools.pixelsPerCityUnit / 100 + makeBigger;
 				float actualMinHeight = (float)properties.minHeight / 100 + makeBigger;
 				float actualMaxHeight = (float)properties.maxHeight / 100 + makeBigger;
 

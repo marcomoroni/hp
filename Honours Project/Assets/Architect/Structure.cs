@@ -10,42 +10,44 @@ namespace Architect
 	{
 		public StructureProperties properties;
 
+		// L-System symbol
+		private class Symbol { }
+		// Conceptually different for terminal definition: for this implementation,
+		// terminals must have a block to calculate height
+		interface ITerminalSymbol
+		{
+			Object BlockPrefabVariant { get; }
+		}
+
+		// Symbols
+		class S_F_Roof : Symbol, ITerminalSymbol
+		{
+			public Object BlockPrefabVariant { get; }
+			public S_F_Roof (int width)
+			{
+				BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(width);
+			}
+		}
+
+
+
+
+
 		// Generate as an L-system
 		public void Generate()
 		{
-			// Load all blocks (maybe move it in city or somewhere else with a satic method)
-			Object[] blockPVs = Resources.LoadAll("Blocks");
-
-			CreateBlock(0, blockPVs);
+			CreateBlock(ArchitectTools.FindValidBlockPrefabVariant(properties.width), 0);
 		}
 
-		private (GameObject, Block) CreateBlock(float posY, Object[] blockPVs)
+		private (GameObject, Block) CreateBlock(Object blockPrefabVariant, float posY)
 		{
-			List<Object> validCandidates = new List<Object>();
+			GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(blockPrefabVariant);
+			go.name = ((GameObject)blockPrefabVariant).name;
+			go.transform.parent = this.gameObject.transform;
+			go.transform.position = go.transform.parent.transform.position + new Vector3(0, posY * (float)ArchitectTools.pixelsPerCityUnit / 100, 0);
+			Block block = go.GetComponent<Block>();
 
-			for (int i = 0; i < blockPVs.Length; i++)
-			{
-				BlockProperties b = ((GameObject)blockPVs[i]).GetComponent<Block>().properties;
-
-				if (b.width == properties.width)
-				{
-					validCandidates.Add(blockPVs[i]);
-				}
-			}
-
-			if (validCandidates.Count > 0)
-			{
-				Object candidateChosen = validCandidates.GetRandom();
-				GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(candidateChosen);
-				go.name = ((GameObject)candidateChosen).name;
-				go.transform.parent = this.gameObject.transform;
-				go.transform.position = go.transform.parent.transform.position + new Vector3(0, posY * (float)City.pixelsPerCityUnit / 100, 0);
-				Block block = go.GetComponent<Block>();
-
-				return (go, block);
-			}
-
-			return (null, null);
+			return (go, block);
 		}
 
 		private void OnDrawGizmos()
@@ -54,7 +56,7 @@ namespace Architect
 			{
 				Gizmos.color = new Color(1, 1, 0);
 
-				float actualWidth = properties.width * (float)City.pixelsPerCityUnit / 100;
+				float actualWidth = properties.width * (float)ArchitectTools.pixelsPerCityUnit / 100;
 				float actualHeight = (float)properties.height / 100;
 
 				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2), new Vector3(actualWidth, actualHeight, 0));
