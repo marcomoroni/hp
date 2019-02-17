@@ -81,6 +81,7 @@ namespace Architect
 		#endregion
 	}
 
+	// If you add things here, remember to update the transition matrix
 	public enum StructureType
 	{
 		Start,
@@ -111,11 +112,11 @@ namespace Architect
 		// Conceptually different for terminal definition: for this implementation,
 		// terminals must have a block to calculate height
 
-		public UnityEngine.Object BlockPrefabVariant { get; set; }
+		public Object BlockPrefabVariant { get; set; }
 	}
 	public abstract class SLS_EmptyTerminalSymbol : SLS_Symbol
 	{
-		public int heigth { get; set; }
+		public int height { get; set; }
 	}
 
 	////////////////////
@@ -142,7 +143,7 @@ namespace Architect
 	{
 		public SLS_T_Empty(int height)
 		{
-			this.heigth = height;
+			this.height = height;
 		}
 	}
 
