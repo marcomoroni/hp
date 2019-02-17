@@ -23,9 +23,10 @@ namespace Architect
 		class S_F_Roof : Symbol, ITerminalSymbol
 		{
 			public Object BlockPrefabVariant { get; }
-			public S_F_Roof (int width)
+
+			public S_F_Roof (StructureProperties properties)
 			{
-				BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(width);
+				BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Roof);
 			}
 		}
 
@@ -36,7 +37,7 @@ namespace Architect
 		// Generate as an L-system
 		public void Generate()
 		{
-			CreateBlock(ArchitectTools.FindValidBlockPrefabVariant(properties.width), 0);
+			CreateBlock(ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Generic), 0);
 		}
 
 		private (GameObject, Block) CreateBlock(Object blockPrefabVariant, float posY)

@@ -21,7 +21,7 @@ namespace Architect
 			}
 		}
 
-		public static Object FindValidBlockPrefabVariant(int width) // TODO: add parameters
+		public static Object FindValidBlockPrefabVariant(StructureProperties properties, BlockCategory blockCategory)
 		{
 			List<Object> validCandidates = new List<Object>();
 
@@ -29,7 +29,8 @@ namespace Architect
 			{
 				BlockProperties b = ((GameObject)BlockPVs[i]).GetComponent<Block>().properties;
 
-				if (b.width == width)
+				// TODO: use properties to find correct ones
+				if (b.width == properties.width)
 				{
 					validCandidates.Add(BlockPVs[i]);
 				}
@@ -43,5 +44,26 @@ namespace Architect
 
 			return null;
 		}
+	}
+
+	public enum StructureType
+	{
+		Start,
+		Generic,
+		Bridge,
+		//BridgeWithMoreOnTop,
+		Empty
+	}
+
+	public enum BlockCategory
+	{
+		Generic,
+		Roof
+	}
+
+	public enum ArchitecturalStyle
+	{
+		Style1,
+		Style2
 	}
 }

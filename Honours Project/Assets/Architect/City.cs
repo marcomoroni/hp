@@ -61,25 +61,4 @@ namespace Architect
 			Selection.activeObject = newCity;
 		}
 	}
-
-	public enum StructureType
-	{
-		Start,
-		Generic,
-		Bridge,
-		//BridgeWithMoreOnTop,
-		Empty
-	}
-
-	public enum BlockCategory
-	{
-		Generic,
-		Roof
-	}
-
-	public enum ArchitecturalStyle
-	{
-		Style1,
-		Style2
-	}
 }
