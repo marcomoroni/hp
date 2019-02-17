@@ -49,16 +49,5 @@ namespace Architect
 
 			return (go, neighborhood);
 		}
-
-		[MenuItem("GameObject/Architect/City", priority = 1)]
-		static void CreateBlockPrefab(MenuCommand menuCommand)
-		{
-			// https://docs.unity3d.com/ScriptReference/MenuItem.html
-			GameObject source = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Architect/City.prefab", typeof(Object));
-			GameObjectUtility.SetParentAndAlign(source, menuCommand.context as GameObject);
-			GameObject newCity = (GameObject)PrefabUtility.InstantiatePrefab(source);
-			Undo.RegisterCreatedObjectUndo(newCity, "Create " + newCity.name);
-			Selection.activeObject = newCity;
-		}
 	}
 }

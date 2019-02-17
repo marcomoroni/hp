@@ -13,24 +13,6 @@ namespace Architect
 
 
 
-
-
-
-		// Maybe shouldn't be in this class :/
-		[MenuItem("Assets/Create/Architect/Block", priority = 2)]
-		static void CreateBlockPrefab(MenuCommand menuCommand)
-		{
-			// Get prefab asset
-			Object source = AssetDatabase.LoadAssetAtPath("Assets/Architect/Block.prefab", typeof(Object));
-			// Instantiate prefab (needed to create a prefab variant asset)
-			GameObject objSource = (GameObject)PrefabUtility.InstantiatePrefab(source);
-			// Create prefab variant asset
-			//GameObject obj = PrefabUtility.SaveAsPrefabAsset(objSource, "Assets/Resources/Blocks/NewBlock.prefab");
-			GameObject obj = PrefabUtility.SaveAsPrefabAsset(objSource, UnityUtil.GetSelectedPathOrFallback() + "/NewBlock.prefab");
-			// Destory prefab instance
-			Object.DestroyImmediate(objSource);
-		}
-
 		private void OnDrawGizmos()
 		{
 			if (properties != null)
