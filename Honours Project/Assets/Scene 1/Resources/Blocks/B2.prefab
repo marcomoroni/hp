@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 421735d81397048ac94ddc3b2c9ce53a,
+      objectReference: {fileID: 21300002, guid: 421735d81397048ac94ddc3b2c9ce53a,
         type: 3}
     - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
@@ -41,7 +41,12 @@ PrefabInstance:
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: properties.height
-      value: 117
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
+        type: 3}
+      propertyPath: properties.category
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281057, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}

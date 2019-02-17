@@ -31,7 +31,7 @@ namespace Architect
 				BlockProperties b = ((GameObject)BlockPVs[i]).GetComponent<Block>().properties;
 
 				// TODO: use properties to find correct ones
-				if (b.width == properties.width)
+				if (b.width == properties.width && b.category == blockCategory)
 				{
 					validCandidates.Add(BlockPVs[i]);
 				}
