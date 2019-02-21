@@ -13,6 +13,7 @@ namespace Architect
 
 
 
+
 		private void OnDrawGizmos()
 		{
 			if (properties != null)

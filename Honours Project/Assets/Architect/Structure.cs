@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using System.Linq;
 
 namespace Architect
 {
@@ -11,10 +12,22 @@ namespace Architect
 	{
 		public StructureProperties properties;
 
+		public List<(Vector2Int, Block)> blocks = new List<(Vector2Int, Block)>();
+
+		public int Height
+		{
+			get { return blocks.Sum(s => s.Item2.properties.height); }
+		}
+
+		public int Width
+		{
+			get { return properties.width; }
+		}
+
 		// Generate as an L-system
 		public void Generate()
 		{
-			int GetTotalHeight(LSystem<SLS_Symbol> symbols)
+			int GetTotalHeightInLSystem(LSystem<SLS_Symbol> symbols)
 			{
 				int total = 0;
 
@@ -36,15 +49,15 @@ namespace Architect
 
 			// Expand until structure height is reached
 			// TODO: CAREFUL: Changes may lead to infinite loop
-			while (GetTotalHeight(blocksLSystem) < properties.height && blocksLSystem.CanBeExpanded())
+			while (GetTotalHeightInLSystem(blocksLSystem) < properties.height && blocksLSystem.CanBeExpanded())
 			{
 				blocksLSystem.Expand();
 			}
-
-			CreateAllBlocks(blocksLSystem);
+			
+			CreateAllBlocksFromLSystem(blocksLSystem);
 		}
 
-		private void CreateAllBlocks(LSystem<SLS_Symbol> derivation)
+		private void CreateAllBlocksFromLSystem(LSystem<SLS_Symbol> derivation)
 		{
 			int currentHeight = 0;
 
@@ -71,6 +84,10 @@ namespace Architect
 			go.transform.parent = this.gameObject.transform;
 			go.transform.position = go.transform.parent.transform.position + new Vector3(0, (float)posY / 100, 0);
 			Block block = go.GetComponent<Block>();
+
+			// Add to list
+			Debug.Log(posY);
+			blocks.Add((new Vector2Int(0, posY), block));
 
 			return (go, block);
 		}
