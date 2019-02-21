@@ -72,16 +72,16 @@ namespace Architect
 		private Texture2D MergeTextures()
 		{
 			Texture2D finalTexture = new Texture2D(Width, Height);
-			Debug.Log(Width + " x " + Height);
-			Color[] finalColors = new Color[finalTexture.width * finalTexture.height];
 
-			// Init final colours
-			for (int i = 0; i < finalColors.Length; i++)
+			// Start wit transparent texture
 			{
-				finalColors[i] = Color.yellow;
+				Color[] initialColours = new Color[finalTexture.width * finalTexture.height];
+				for (int i = 0; i < initialColours.Length; i++)
+				{
+					initialColours[i] = new Color(0, 0, 0, 0);
+				}
+				finalTexture.SetPixels(initialColours);
 			}
-
-			finalTexture.SetPixels(finalColors);
 
 			// Merge textures
 			foreach (var structure in structures)
@@ -92,40 +92,23 @@ namespace Architect
 				{
 					Vector2Int blockPos = structurePos + new Vector2Int(block.Item1.x, block.Item1.y);
 
-					// TEMP
-					//finalColors[pos.y * (finalTexture.width - 1) + pos.x] = Color.red;
-
-					// TEMP
-					Color[] newCol = new Color[8 * 8];
-					for (int i = 0; i < newCol.Length; i++)
-					{
-						newCol[i] = Color.black;
-					}
-					finalTexture.SetPixels(blockPos.x, blockPos.y, 8, 8, newCol);
-
-
-					/*Sprite blockSprite = block.Item2.gameObject.GetComponent<SpriteRenderer>().sprite; // Spaghetti alert
-					Color[] blockColors = blockSprite.texture.GetPixels((int)blockSprite.textureRectOffset.x, (int)blockSprite.textureRectOffset.y, (int)blockSprite.textureRect.x, (int)blockSprite.textureRect.y);
-					Vector2Int blockPivot = new Vector2Int((int)blockSprite.pivot.x, (int)blockSprite.pivot.y); // Match this with pos
-
-					finalTexture.SetPixels(blockPos.x, blockPos.y, (int)blockSprite.textureRect.x, (int)blockSprite.textureRect.y, blockColors);*/
-
-
-					/*Sprite blockSprite = block.Item2.gameObject.GetComponent<SpriteRenderer>().sprite; // Spaghetti alert
-					Color[] blockColors = blockSprite.texture.GetPixels(Mathf.FloorToInt(blockSprite.textureRectOffset.x), Mathf.FloorToInt(blockSprite.textureRectOffset.y), Mathf.FloorToInt(blockSprite.textureRect.x), Mathf.FloorToInt(blockSprite.textureRect.y));
-					Vector2Int blockPivot = new Vector2Int(Mathf.FloorToInt(blockSprite.pivot.x), Mathf.FloorToInt(blockSprite.pivot.y)); // Match this with pos
-
-					finalTexture.SetPixels(blockPos.x, blockPos.y, Mathf.FloorToInt(blockSprite.textureRect.x), Mathf.FloorToInt(blockSprite.textureRect.y), blockColors);*/
+					Sprite blockSprite = block.Item2.gameObject.GetComponent<SpriteRenderer>().sprite; // Spaghetti alert
+					Rect blockRect = blockSprite.rect;
+					int bX = Mathf.FloorToInt(blockRect.x);
+					int bY = Mathf.FloorToInt(blockRect.y);
+					int bWidth = Mathf.FloorToInt(blockRect.width);
+					int bHeight = Mathf.FloorToInt(blockRect.height);
+					Color[] blockColors = blockSprite.texture.GetPixels(bX, bY, bWidth, bHeight);
+					finalTexture.SetPixels(blockPos.x, blockPos.y, bWidth, bHeight, blockColors); // TODO: USE NormalBlend() !
 				}
 			}
 
 			// Set final texture and apply
-			//finalTexture.SetPixels(finalColors);
 			finalTexture.Apply();
 
 			// Texture settings -> MAY CHANGE THEM
 			finalTexture.wrapMode = TextureWrapMode.Clamp;
-			finalTexture.filterMode = FilterMode.Point;
+			//finalTexture.filterMode = FilterMode.Point;
 
 			return finalTexture;
 		}
