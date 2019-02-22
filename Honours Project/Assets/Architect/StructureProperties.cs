@@ -25,7 +25,8 @@ namespace Architect
 			}
 			else
 			{
-				width = ArchitectTools.PossibleWidths[UnityEngine.Random.Range(0, 3)]; // TEMP
+				int[] possibleWidths = ArchitectTools.PossibleWidths;
+				width = possibleWidths[UnityEngine.Random.Range(0, possibleWidths.Length - 1)];
 			}
 
 			// Create L-System properties

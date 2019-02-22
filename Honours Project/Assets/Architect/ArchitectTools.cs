@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Linq;
 
 namespace Architect
 {
@@ -52,8 +53,11 @@ namespace Architect
 			{
 				if (possibleWidths == null)
 				{
-					// TEMP
-					possibleWidths = new int[] { 64, 64 * 2, 64 * 3};
+					// TODO: only Generic blocks
+					possibleWidths = BlockPVs
+						.Select(b => ((GameObject)b).GetComponent<Block>().properties.width)
+						.Distinct()
+						.ToArray();
 				}
 				return possibleWidths;
 			}
