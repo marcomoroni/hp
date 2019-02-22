@@ -62,6 +62,7 @@ namespace Architect
 		{
 			GameObject go = Instantiate(structurePrefab, transform.position.With(x: transform.position.x + (float)pos / 100), transform.rotation);
 			go.name = structurePrefab.name;
+			go.transform.parent = gameObject.transform;
 			Structure structure = go.GetComponent<Structure>();
 			structure.properties = new StructureProperties(properties, type);
 			structure.Generate(); // TODO: Change parameters depending on Structure Type OR add generation info to prameters
