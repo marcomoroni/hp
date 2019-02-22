@@ -86,7 +86,6 @@ namespace Architect
 			Block block = go.GetComponent<Block>();
 
 			// Add to list
-			Debug.Log(posY);
 			blocks.Add((new Vector2Int(0, posY), block));
 
 			return (go, block);
