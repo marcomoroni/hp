@@ -56,6 +56,14 @@ namespace Architect
 
 			// Disable single sprites
 			DisableMergedSprites();
+
+			// Set correct sorting layer
+			sr.sortingOrder = - Mathf.FloorToInt(transform.position.z);
+
+
+
+			// Align to center of neighborhood origin
+			transform.position = transform.position + new Vector3(-(float)Width / 2 / 100, 0, 0);
 		}
 
 		private (GameObject, Structure) CreateStructure(StructureType type, int pos)

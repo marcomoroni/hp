@@ -18,6 +18,10 @@ namespace Architect
 		[Header("Prefabs")]
 		public GameObject neighborhoodPrefab;
 
+		[HideInInspector]
+		// <pos, structure>
+		private List<(Vector3, Neighborhood)> neighborhoods = new List<(Vector3, Neighborhood)>();
+
 
 
 		private void Start()
@@ -35,13 +39,21 @@ namespace Architect
 				properties.Randomize();
 			}
 
-			// TEMP: Generate 1 neighborhood
-			CreateNeighborhood();
+			// Generate neighborhoods
+			for (int i = 0; i < properties.neighborhoods; i++)
+			{
+				Vector3 pos = new Vector3(
+					Random.Range(-6f, 6f),
+					0,
+					2.6f * i);
+
+				CreateNeighborhood(pos);
+			}
 		}
 
-		private (GameObject, Neighborhood) CreateNeighborhood()
+		private (GameObject, Neighborhood) CreateNeighborhood(Vector3 pos)
 		{
-			GameObject go = Instantiate(neighborhoodPrefab, transform.position, transform.rotation);
+			GameObject go = Instantiate(neighborhoodPrefab, transform.position + pos, transform.rotation);
 			go.name = neighborhoodPrefab.name;
 			Neighborhood neighborhood = go.GetComponent<Neighborhood>();
 			neighborhood.properties = new NeighborhoodProperties(properties);

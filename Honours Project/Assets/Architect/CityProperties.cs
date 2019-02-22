@@ -11,16 +11,21 @@ namespace Architect
 		public int minWidth = 200;
 		[Tooltip("In pixels.")]
 		public int maxWidth = 640;
+
 		[Tooltip("In pixels.")]
 		public int minHeight = 600;
 		[Tooltip("In pixels.")]
 		public int maxHeight = 700;
-		public Color color1 = Color.cyan; // TEMP
-		public ArchitecturalStyle style;
+
+		public ArchitecturalStyle style; // NOT IMPLEMENTED
+
+		[Tooltip("Number of neighborhoods.")]
+		public int neighborhoods = 5; // z-axis
+
 
 		public void Randomize()
 		{
-			color1 = Random.ColorHSV();
+
 		}
 	}
 }
