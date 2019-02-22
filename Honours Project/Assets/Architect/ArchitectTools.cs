@@ -15,7 +15,10 @@ namespace Architect
 			{
 				if (blockPVs == null)
 				{
-					blockPVs = Resources.LoadAll("Blocks");
+					Object[] allBlocks = Resources.LoadAll("Blocks");
+
+					// Remove ignored blocks
+					blockPVs = allBlocks.Where(b => !((GameObject)b).GetComponent<Block>().properties.ignore).ToArray();
 				}
 				return blockPVs;
 			}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3707947006443957592
+--- !u!1001 &2952492232264555480
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,23 +10,23 @@ PrefabInstance:
     - target: {fileID: 8223059264280281062, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: m_Name
-      value: B5
+      value: B20
       objectReference: {fileID: 0}
     - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300008, guid: 421735d81397048ac94ddc3b2c9ce53a,
+      objectReference: {fileID: 21300024, guid: 3ba589c12ddf347d4818bb62d02f227a,
         type: 3}
     - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.64
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.28
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 4582939251756342365, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
@@ -36,16 +36,16 @@ PrefabInstance:
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: properties.width
-      value: 64
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
       propertyPath: properties.height
-      value: 103
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281059, guid: 57725c0c9256bce4f9b3c0b92c894ff5,
         type: 3}
-      propertyPath: properties.ignore
+      propertyPath: properties.category
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8223059264280281057, guid: 57725c0c9256bce4f9b3c0b92c894ff5,

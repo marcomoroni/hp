@@ -7,6 +7,8 @@ namespace Architect
 	[System.Serializable]
 	public class BlockProperties
 	{
+		public bool ignore = false;
+
 		public BlockCategory category;
 
 		[Tooltip("In pixels.")]

@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: 3ba589c12ddf347d4818bb62d02f227a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tumblr_mayusr2jYT1qe4m5yo1_500_0
+    21300002: tumblr_mayusr2jYT1qe4m5yo1_500_1
+    21300004: tumblr_mayusr2jYT1qe4m5yo1_500_2
+    21300006: tumblr_mayusr2jYT1qe4m5yo1_500_3
+    21300008: tumblr_mayusr2jYT1qe4m5yo1_500_4
+    21300010: tumblr_mayusr2jYT1qe4m5yo1_500_5
+    21300012: tumblr_mayusr2jYT1qe4m5yo1_500_6
+    21300014: tumblr_mayusr2jYT1qe4m5yo1_500_7
+    21300016: tumblr_mayusr2jYT1qe4m5yo1_500_8
+    21300018: tumblr_mayusr2jYT1qe4m5yo1_500_9
+    21300020: tumblr_mayusr2jYT1qe4m5yo1_500_10
+    21300022: tumblr_mayusr2jYT1qe4m5yo1_500_11
+    21300024: tumblr_mayusr2jYT1qe4m5yo1_500_12
+    21300026: tumblr_mayusr2jYT1qe4m5yo1_500_13
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_0
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 237
+        width: 51
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c6bd46364234c8f87cfc2b03a474fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 211
+        width: 51
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15963ce5872f4a848eaf2be10e663ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 196
+        width: 51
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615119da1f12943109a5c9ae0609473e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 186
+        width: 51
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efcbdd53553f47bb88f104acca778bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_4
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 158
+        width: 51
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ca069f2714d4e9a9b688e4e06c469e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 145
+        width: 51
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4686373bb2234f80b0d503436eb95c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 120
+        width: 51
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897c123cf543c434f9141e3507cec6c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 103
+        width: 51
+        height: 17
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d16e73f437a44d40b56b075f6444388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 60
+        width: 51
+        height: 43
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edd7bfff175b442eba422e3ebafe745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 148
+        width: 16
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235cf8a22431b4055aaaac6342393d50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 166
+        width: 16
+        height: 7
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c72e33dc6ff9495f8030644f5fc3650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 173
+        width: 16
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935ab1d24be8a416db01991f865cad82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 202
+        width: 16
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caee30dd81cd0450f99ebedad6eac55f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumblr_mayusr2jYT1qe4m5yo1_500_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 251
+        width: 51
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ded95b1184f454ba3fb9034ce6efc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f79cb9e84e5904949bb14d73702f3b20
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
