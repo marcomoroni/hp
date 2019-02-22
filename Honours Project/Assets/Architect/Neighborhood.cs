@@ -49,10 +49,13 @@ namespace Architect
 
 
 
-
+			// Merge textures
 			var t = MergeTextures();
 			var sr = GetComponent<SpriteRenderer>();
 			sr.sprite = Sprite.Create(t, new Rect(0, 0, t.width, t.height), new Vector2(0, 0));
+
+			// Disable single sprites
+			DisableMergedSprites();
 		}
 
 		private (GameObject, Structure) CreateStructure(StructureType type, int pos)
@@ -123,6 +126,17 @@ namespace Architect
 			Color bLayer = b * bAlpha;
 
 			return aLayer + bLayer;
+		}
+
+		private void DisableMergedSprites()
+		{
+			foreach (var structure in structures)
+			{
+				foreach (var block in structure.Item2.blocks)
+				{
+					block.Item2.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+				}
+			}
 		}
 
 		private void OnDrawGizmos()
