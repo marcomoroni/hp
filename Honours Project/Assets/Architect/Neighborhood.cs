@@ -9,6 +9,7 @@ namespace Architect
 	public class Neighborhood : MonoBehaviour
 	{
 		public NeighborhoodProperties properties;
+		public ParticleSystemRenderer wind;
 
 		[Header("Prefabs")]
 		public GameObject structurePrefab;
@@ -59,6 +60,11 @@ namespace Architect
 
 			// Set correct sorting layer
 			sr.sortingOrder = - Mathf.FloorToInt(transform.position.z);
+
+
+
+			// Set wind sorting lay
+			wind.sortingOrder = sr.sortingOrder - 1;
 
 
 
