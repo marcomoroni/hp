@@ -45,11 +45,12 @@ namespace Architect
 				return candidateChosen;
 			}
 
-			Debug.LogWarning("Cannot find a block with required properties.");
+			Debug.LogWarning("Cannot find a block with required properties: Cat: " + blockCategory + " W:" + properties.width + ".");
+			//Debug.LogWarning("Cannot find a block with required properties: W:" + properties.width + ".");
 			return null;
 		}
 
-		private static int[] possibleWidths;
+		/*private static int[] possibleWidths;
 		public static int[] PossibleWidths
 		{
 			get
@@ -64,6 +65,37 @@ namespace Architect
 				}
 				return possibleWidths;
 			}
+		}*/
+
+		public static int GetAValidVWidth(StructureType structureType)
+		{
+			// If random in range
+
+			switch (structureType)
+			{
+				case StructureType.Empty:
+					return UnityEngine.Random.Range(10, 30 + 1);
+			}
+
+
+			// If choose one
+
+			List<int> possibleWidths = new List<int>();
+
+			// Hard coded
+			switch (structureType)
+			{
+				case StructureType.Generic:
+					possibleWidths.AddRange(new int[] { 64, 114, 128, 156 }); break;
+
+				case StructureType.Bridge:
+					possibleWidths.AddRange(new int[] { 48, 83, 128, 160 }); break;
+
+				default:
+					possibleWidths.Add(0); break;
+			}
+
+			return possibleWidths[UnityEngine.Random.Range(0, possibleWidths.Count)];
 		}
 
 		public static BlockProperties GetPropertiesOfBlockPV(Object pv)
@@ -108,7 +140,7 @@ namespace Architect
 		Generic,
 		Bridge,
 		//BridgeWithMoreOnTop,
-		Empty
+		Empty,
 	}
 
 	public enum BlockCategory
@@ -157,6 +189,14 @@ namespace Architect
 		public SLS_F_Generic(StructureProperties properties)
 		{
 			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Generic);
+		}
+	}
+
+	class SLS_F_Bridge : SLS_TerminalSymbol
+	{
+		public SLS_F_Bridge(StructureProperties properties)
+		{
+			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Bridge);
 		}
 	}
 

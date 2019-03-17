@@ -120,7 +120,7 @@ namespace Architect
 
 			// Texture settings -> MAY CHANGE THEM
 			finalTexture.wrapMode = TextureWrapMode.Clamp;
-			//finalTexture.filterMode = FilterMode.Point;
+			finalTexture.filterMode = FilterMode.Point;
 
 			return finalTexture;
 		}

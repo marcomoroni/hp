@@ -17,9 +17,10 @@ namespace Architect
 
 		public StructureProperties(NeighborhoodProperties neighborhoodProperties, StructureType structureType)
 		{
+			Debug.Log(structureType);
 			height = UnityEngine.Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
 			//width = UnityEngine.Random.Range(1, 3 + 1);
-			if (structureType == StructureType.Empty)
+			/*if (structureType == StructureType.Empty)
 			{
 				width = UnityEngine.Random.Range(10, 30 + 1); // TEMP
 			}
@@ -27,7 +28,8 @@ namespace Architect
 			{
 				int[] possibleWidths = ArchitectTools.PossibleWidths;
 				width = possibleWidths[UnityEngine.Random.Range(0, possibleWidths.Length)];
-			}
+			}*/
+			width = ArchitectTools.GetAValidVWidth(structureType);
 
 			// Create L-System properties
 			switch (structureType)
@@ -38,8 +40,8 @@ namespace Architect
 					break;
 
 				case StructureType.Bridge:
-					axioms.Add(new SLS_T_Empty(70));
-					axioms.Add(new SLS_F_Generic(this));
+					axioms.Add(new SLS_T_Empty(70)); // Space below bridge
+					axioms.Add(new SLS_F_Bridge(this));
 					break;
 			}
 

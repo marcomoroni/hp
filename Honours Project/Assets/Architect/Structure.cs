@@ -35,7 +35,12 @@ namespace Architect
 				{
 					switch (symbol)
 					{
+						case SLS_EmptyTerminalSymbol ts:
+							total += ts.height;
+							break;
+
 						case SLS_TerminalSymbol ts:
+							if (ts.BlockPrefabVariant == null) Debug.Log("Upsiedaisy ");
 							total += ArchitectTools.GetPropertiesOfBlockPV(ts.BlockPrefabVariant).height;
 							break;
 					}
@@ -65,13 +70,13 @@ namespace Architect
 			{
 				switch (symbol)
 				{
+					case SLS_T_Empty ts:
+						currentHeight += ts.height;
+						break;
+
 					case SLS_TerminalSymbol ts:
 						var newBlock = CreateBlock(ts.BlockPrefabVariant, currentHeight);
 						currentHeight += newBlock.Item2.properties.height;
-						break;
-
-					case SLS_EmptyTerminalSymbol ts:
-						currentHeight += ts.height;
 						break;
 				}
 			}
