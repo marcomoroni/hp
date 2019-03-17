@@ -40,7 +40,8 @@ namespace Architect
 			}
 
 			// Generate neighborhoods
-			for (int i = 0; i < properties.neighborhoods; i++)
+			int numNeighbourhoods = UnityEngine.Random.Range(properties.minNeighbourhoods, properties.maxNeighbourhoods + 1);
+			for (int i = 0; i < numNeighbourhoods; i++)
 			{
 				Vector3 pos = new Vector3(
 					Random.Range(-6f, 6f),

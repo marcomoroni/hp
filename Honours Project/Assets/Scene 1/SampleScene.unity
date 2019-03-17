@@ -5223,7 +5223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924546216}
   m_LocalRotation: {x: 0.05954256, y: 9.187662e-17, z: 1.5403034e-15, w: 0.9982258}
-  m_LocalPosition: {x: 0, y: -2.9536395, z: 18.782066}
+  m_LocalPosition: {x: -0, y: -1.75, z: 7.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1495673206}
@@ -5267,7 +5267,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_RenderMode: 3
   m_SortMode: 1
   m_MinParticleSize: 0
@@ -5926,7 +5926,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: -10.36, y: 5, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 52.66, y: 10.75, z: 33.380905}
+    m_Scale: {x: 33.35, y: 10.75, z: 14.9}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0

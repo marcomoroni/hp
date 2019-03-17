@@ -30,7 +30,7 @@ public class OverlayController : MonoBehaviour
 				1,
 				1,
 				1,
-				overlay.color.a + 0.8f * Time.deltaTime);
+				overlay.color.a + 0.5f * Time.deltaTime);
 
 			yield return null;
 		}

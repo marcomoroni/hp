@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		//yield return new WaitUntil(() => { return Input.GetKeyDown("space"); }); // change to readytoexit
-		yield return new WaitForSeconds(5.0f);
+		yield return new WaitForSeconds(7.0f);
 		operation.allowSceneActivation = true;
 	}
 }

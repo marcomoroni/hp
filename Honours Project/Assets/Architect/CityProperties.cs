@@ -19,8 +19,11 @@ namespace Architect
 
 		public ArchitecturalStyle style; // NOT IMPLEMENTED
 
-		[Tooltip("Number of neighborhoods.")]
-		public int neighborhoods = 5; // z-axis
+		//[Tooltip("Number of neighborhoods.")]
+		//public int neighborhoods = 5; // z-axis
+
+		public int minNeighbourhoods = 2;
+		public int maxNeighbourhoods = 5;
 
 
 		public void Randomize()
