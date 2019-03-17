@@ -47,8 +47,8 @@ namespace Architect
 					break;
 
 				case StructureType.Bridge:
-					int bottomSpace = UnityEngine.Random.Range(10, neighborhoodProperties.minHeight - 100);
-					axioms.Add(new SLS_T_Empty(bottomSpace)); // Space below bridge
+					//int bottomSpace = UnityEngine.Random.Range(10, (neighborhoodProperties.minHeight + neighborhoodProperties.maxHeight) / 2); // some will be wrong
+					axioms.Add(new SLS_T_Empty(0)); // Space below bridge // NO NEED ANYMORE
 					axioms.Add(new SLS_F_Bridge(this));
 					break;
 			}

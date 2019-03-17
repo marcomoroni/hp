@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class ShowHideInstructions : MonoBehaviour
 {
-	public GameObject instructions;
+	public GameObject[] things;
 
-    void Update()
+	private void Start()
+	{
+		UpdateVisibility();
+	}
+
+	void Update()
     {
         if (Input.GetKeyDown("c"))
 		{
-			instructions.SetActive(!instructions.activeSelf);
+			GameManagerData.hideUI = !GameManagerData.hideUI;
+			UpdateVisibility();
 		}
+	}
+
+	private void UpdateVisibility()
+	{
+		bool hideUI = GameManagerData.hideUI;
+
+		foreach (var t in things)
+			t.SetActive(!hideUI);
 	}
 }

@@ -50,6 +50,35 @@ namespace Architect
 
 
 
+			// Set Y pos of bridges (now that you know the max pos possible)
+			for (int s = 0; s < structures.Count; s++)
+			{
+				for (int b = 0; b < structures[s].Item2.blocks.Count; b++)
+				{
+					Block block = structures[s].Item2.blocks[b].Item2;
+
+					if (block.properties.category == BlockCategory.Bridge)
+					{
+						// Get left / right heights
+						int heightLeft = structures[s - 1].Item2.Height - 100;
+						int heightLeftRoof = structures[s - 1].Item2.blocks.Last().Item2.properties.height;
+						int heightRight = structures[s + 1].Item2.Height - 100;
+						int heightRightRoof = structures[s + 1].Item2.blocks.Last().Item2.properties.height;
+
+						int maxHeight = Mathf.Min(heightLeft - heightLeftRoof, heightRight - heightRightRoof) - block.properties.height;
+						int newHeight = Mathf.Max(20, UnityEngine.Random.Range(0, maxHeight + 1));
+
+						//Debug.Log(heightLeft + " " + heightLeft + " " + maxHeight + " " + newHeight);
+
+						Vector2Int newPos = structures[s].Item2.blocks[b].Item1.With(y: newHeight);
+						structures[s].Item2.blocks[b] = (newPos, structures[s].Item2.blocks[b].Item2);
+					}
+				}
+			}
+
+
+
+
 			// Merge textures
 			var t = MergeTextures();
 			var sr = GetComponent<SpriteRenderer>();

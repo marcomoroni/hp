@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 {
 	private GameManagerStates currentState;
 
+	private float slideshowTimer = 20.0f;
+	public class UnityBoolEvent : UnityEvent<bool> { }
+	public static UnityBoolEvent slideshowModeChanged = new UnityBoolEvent();
+
 	public static UnityEvent ExitingScene = new UnityEvent();
 
 	private void Start()
@@ -19,21 +23,37 @@ public class GameManager : MonoBehaviour
 	{
 		if (Input.GetKeyDown("r") && currentState == GameManagerStates.Normal)
 		{
-			Debug.Log("Reloading");
-			ExitingScene.Invoke();
-			currentState = GameManagerStates.Exiting;
 			StartCoroutine(ReloadLevel());
+		}
+
+		if (Input.GetKeyDown("s"))
+		{
+			GameManagerData.slideshowMode = !GameManagerData.slideshowMode;
+			slideshowTimer = 20.0f;
+			slideshowModeChanged.Invoke(GameManagerData.slideshowMode);
+		}
+
+		if (GameManagerData.slideshowMode && currentState == GameManagerStates.Normal)
+		{
+			slideshowTimer -= Time.deltaTime;
+
+			if (slideshowTimer <= 0)
+			{
+				StartCoroutine(ReloadLevel());
+			}
 		}
 	}
 
 	IEnumerator ReloadLevel()
 	{
+		currentState = GameManagerStates.Exiting;
+		ExitingScene.Invoke();
+
 		AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 		operation.allowSceneActivation = false;
 
 		while (!operation.isDone && operation.progress < 0.9f)
 		{
-			Debug.Log(operation.progress);
 			yield return null;
 		}
 
@@ -48,4 +68,10 @@ public enum GameManagerStates
 	Normal,
 	Exiting,
 	ReadyToExit
+}
+
+public static class GameManagerData
+{
+	public static bool slideshowMode = false;
+	public static bool hideUI = false;
 }
