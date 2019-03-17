@@ -39,6 +39,14 @@ namespace Architect
 					axioms.Add(new SLS_F_Roof(this));
 					break;
 
+				case StructureType.Tree:
+					axioms.Add(new SLS_F_Tree(this));
+					break;
+
+				case StructureType.Forest:
+					axioms.Add(new SLS_F_Forest(this));
+					break;
+
 				case StructureType.Bridge:
 					axioms.Add(new SLS_T_Empty(70)); // Space below bridge
 					axioms.Add(new SLS_F_Bridge(this));

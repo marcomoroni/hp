@@ -40,7 +40,6 @@ namespace Architect
 							break;
 
 						case SLS_TerminalSymbol ts:
-							if (ts.BlockPrefabVariant == null) Debug.Log("Upsiedaisy ");
 							total += ArchitectTools.GetPropertiesOfBlockPV(ts.BlockPrefabVariant).height;
 							break;
 					}

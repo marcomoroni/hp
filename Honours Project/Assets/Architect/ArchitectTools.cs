@@ -45,7 +45,7 @@ namespace Architect
 				return candidateChosen;
 			}
 
-			Debug.LogWarning("Cannot find a block with required properties: Cat: " + blockCategory + " W:" + properties.width + ".");
+			Debug.LogWarning("Cannot find a block with required properties: Cat: " + blockCategory.ToString() + " W:" + properties.width + ".");
 			//Debug.LogWarning("Cannot find a block with required properties: W:" + properties.width + ".");
 			return null;
 		}
@@ -75,6 +75,9 @@ namespace Architect
 			{
 				case StructureType.Empty:
 					return UnityEngine.Random.Range(10, 30 + 1);
+
+				case StructureType.LongEmpty:
+					return UnityEngine.Random.Range(100, 200 + 1);
 			}
 
 
@@ -89,7 +92,13 @@ namespace Architect
 					possibleWidths.AddRange(new int[] { 64, 114, 128, 156 }); break;
 
 				case StructureType.Bridge:
-					possibleWidths.AddRange(new int[] { 48, 83, 128, 160 }); break;
+					possibleWidths.AddRange(new int[] { 49, 83, 128, 160 }); break;
+
+				case StructureType.Tree:
+					possibleWidths.AddRange(new int[] { 227, 218, 219 }); break;
+
+				case StructureType.Forest:
+					possibleWidths.AddRange(new int[] { 648, 891 }); break;
 
 				default:
 					possibleWidths.Add(0); break;
@@ -141,6 +150,9 @@ namespace Architect
 		Bridge,
 		//BridgeWithMoreOnTop,
 		Empty,
+		Tree,
+		Forest,
+		LongEmpty
 	}
 
 	public enum BlockCategory
@@ -197,6 +209,22 @@ namespace Architect
 		public SLS_F_Bridge(StructureProperties properties)
 		{
 			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Bridge);
+		}
+	}
+
+	class SLS_F_Tree : SLS_TerminalSymbol
+	{
+		public SLS_F_Tree(StructureProperties properties)
+		{
+			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Tree);
+		}
+	}
+
+	class SLS_F_Forest : SLS_TerminalSymbol
+	{
+		public SLS_F_Forest(StructureProperties properties)
+		{
+			BlockPrefabVariant = ArchitectTools.FindValidBlockPrefabVariant(properties, BlockCategory.Forest);
 		}
 	}
 
