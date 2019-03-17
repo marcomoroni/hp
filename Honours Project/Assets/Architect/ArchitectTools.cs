@@ -114,7 +114,10 @@ namespace Architect
 	public enum BlockCategory
 	{
 		Generic,
-		Roof
+		Roof,
+		Bridge,
+		Tree,
+		Forest
 	}
 
 	public enum ArchitecturalStyle

@@ -18,17 +18,14 @@ namespace Architect
 		{
 			if (properties != null)
 			{
-				if (properties.width > 0 && properties.height > 0)
-				{
-					Gizmos.color = new Color(0, 1, 0);
+				Gizmos.color = new Color(0, 1, 0);
 
-					float makeBigger = -0f; // actually, make smaller
+				float makeBigger = -0f; // actually, make smaller
 
-					float actualWidth = (float)properties.width / 100 + makeBigger;
-					float actualHeight = (float)properties.height / 100 + makeBigger;
+				float actualWidth = (float)properties.width / 100 + makeBigger;
+				float actualHeight = (float)properties.height / 100 + makeBigger;
 
-					Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualHeight, 0));
-				}
+				Gizmos.DrawWireCube(transform.position + new Vector3(actualWidth / 2, actualHeight / 2) - new Vector3(makeBigger / 2, makeBigger / 2), new Vector3(actualWidth, actualHeight, 0));
 			}
 		}
 	}

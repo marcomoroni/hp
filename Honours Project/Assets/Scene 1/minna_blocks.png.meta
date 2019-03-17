@@ -1,0 +1,1233 @@
+fileFormatVersion: 2
+guid: 799d580ef7cda4893a398012896bdf75
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: minna_blocks_0
+    21300002: minna_blocks_1
+    21300004: minna_blocks_2
+    21300006: minna_blocks_3
+    21300008: minna_blocks_4
+    21300010: minna_blocks_5
+    21300012: minna_blocks_6
+    21300014: minna_blocks_7
+    21300016: minna_blocks_8
+    21300018: minna_blocks_9
+    21300020: minna_blocks_10
+    21300022: minna_blocks_11
+    21300024: minna_blocks_12
+    21300026: minna_blocks_13
+    21300028: minna_blocks_14
+    21300030: minna_blocks_15
+    21300032: minna_blocks_16
+    21300034: minna_blocks_17
+    21300036: minna_blocks_18
+    21300038: minna_blocks_19
+    21300040: minna_blocks_20
+    21300042: minna_blocks_21
+    21300044: minna_blocks_22
+    21300046: minna_blocks_23
+    21300048: minna_blocks_24
+    21300050: minna_blocks_25
+    21300052: minna_blocks_26
+    21300054: minna_blocks_27
+    21300056: minna_blocks_28
+    21300058: minna_blocks_29
+    21300060: minna_blocks_30
+    21300062: minna_blocks_31
+    21300064: minna_blocks_32
+    21300066: minna_blocks_33
+    21300068: minna_blocks_34
+    21300070: minna_blocks_35
+    21300072: minna_blocks_36
+    21300074: minna_blocks_37
+    21300076: minna_blocks_38
+    21300078: minna_blocks_39
+    21300080: minna_blocks_40
+    21300082: minna_blocks_41
+    21300084: minna_blocks_42
+    21300086: minna_blocks_43
+    21300088: minna_blocks_44
+    21300090: minna_blocks_45
+    21300092: minna_blocks_46
+    21300094: minna_blocks_47
+    21300096: minna_blocks_48
+    21300098: minna_blocks_49
+    21300100: minna_blocks_50
+    21300102: minna_blocks_51
+    21300104: minna_blocks_52
+    21300106: minna_blocks_53
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: minna_blocks_0
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 995
+        width: 64
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a549e61b0f9491d9418178ab09c449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 949
+        width: 156
+        height: 62
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9be54ef046d4bed90b12313b8a58d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_2
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1000
+        width: 49
+        height: 39
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa40231bb21e4c0ebfa8a0e31dde74e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_3
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 659
+        width: 227
+        height: 420
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee72e5bda4f94b5ab3c2a2e5c5e3767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_4
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 694
+        width: 217
+        height: 316
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e23da710ffe4de283603eccd1e4456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 691
+        width: 218
+        height: 355
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4cf68c567c0471580360a9e00162db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 928
+        width: 64
+        height: 38
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a8a43dc6393407eab06e224ea3e0a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 826
+        width: 156
+        height: 114
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986dec87944e54252913ed0df61a0fc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 872
+        width: 114
+        height: 75
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9471d4f9e298c45e7bfdb974224f6182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_9
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 831
+        width: 83
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7927ec405e858444ebb032f48fc938e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 863
+        width: 128
+        height: 54
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ffc558cf64d4d94b5e4ef4c95c4b7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_11
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 780
+        width: 64
+        height: 132
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a66bb08d2d940aaa26fa760728062f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 733
+        width: 128
+        height: 110
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b886fe7e58ee49d889a8a2bdbc1d699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_13
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 746
+        width: 156
+        height: 76
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3b87773c4c848d688e9db4c1d28da4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 794
+        width: 114
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b9ec3aed4fc43b994bd727205a92a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_15
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 705
+        width: 64
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cb5dbc5f63b468b816bbe056963b6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_16
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 667
+        width: 156
+        height: 74
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e4b66c6fd10475ab2ba142588526a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 644
+        width: 114
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091448266491e4a21b60a8a519dc1c58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_18
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 730
+        width: 128
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7218b19297f4a46378dbc7c5b7a36036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 659
+        width: 128
+        height: 70
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b542e5ab3d4d249e997fc4daf60d5550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_20
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 619
+        width: 64
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d2b19a99493469b9418de2d8f7f98b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_21
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 605
+        width: 160
+        height: 66
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3d0a9977d7b487ebc6d6dc5c2e6e87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 629
+        width: 128
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a7fe106e03646ff84df430d3bded32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 581
+        width: 156
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9a7bf93229c4ac1bccc26a4e36bac3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_24
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 548
+        width: 128
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ae603e88297482ea11c65dd0b954d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_25
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 558
+        width: 64
+        height: 41
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a0dbe2f36b84c07b565b59b4bbca08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_26
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 556
+        width: 156
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc0841267d34487e88a17deb73acfeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_27
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 552
+        width: 114
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e9d2ba49f2c4a3a80b93b39ebe931e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_28
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 409
+        width: 128
+        height: 128
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e646e4716a7c84a939ecf938d134f50d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_29
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 440
+        width: 64
+        height: 105
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30507e40d68e472cbe5f671e32d3ea5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_30
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 523
+        width: 156
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d20594d1f43496b909cff0cc1a791c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_31
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 509
+        width: 114
+        height: 20
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853701036363b462f857864010fbafcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_32
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 447
+        width: 156
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93334396536ca4e6b9083e2ef6da0860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_33
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 385
+        width: 114
+        height: 110
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a69a0805dcb44139897081aec5d781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_34
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 402
+        width: 64
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e025016bf734d2a9c469cf9d6ea02d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_35
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 322
+        width: 156
+        height: 110
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19c0cbb116d04fd08e8b5eb4138425a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_36
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 338
+        width: 646
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952dd2b24c903496d92613d5da2f6995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_37
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 328
+        width: 128
+        height: 71
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f459f94fab5d4c65b4746871139305e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_38
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 324
+        width: 64
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88160394088e142b085b45e0f001b6ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_39
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 294
+        width: 114
+        height: 76
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d48cccecc924c9ba1a848eb5d06f54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_40
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 297
+        width: 128
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb1c38375eb64bd59f7d02254c59c20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_41
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 208
+        width: 64
+        height: 106
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0631b8c6603c54ce69201e8ed32fef76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_42
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 296
+        width: 156
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53ff7cd42d6a4af2a212a24699fe2db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_43
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 251
+        width: 128
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0959d373ca7a84e13aa1b71ffd5d1f06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_44
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 265
+        width: 156
+        height: 21
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc1a5d178b504a629631f500a8b0abf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_45
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 224
+        width: 114
+        height: 60
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d4a5e452a9847fa846a505018d1635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_46
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 130
+        width: 890
+        height: 148
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5203f0e9c357450b9d973b25d611fc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_47
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 63
+        width: 128
+        height: 178
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8b3eeb8413948dbb267124f70e6f66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_48
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 171
+        width: 64
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617797816cf16432c9bb57f21e211290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_49
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 187
+        width: 156
+        height: 67
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6007e8b5c0f4a249e5a3b419eb7fbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_50
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 63
+        width: 114
+        height: 149
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baf879ab8b4c446da8a07c2045b06a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_51
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 136
+        width: 64
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b8a4977a65e4d8ca7d03c88356c706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_52
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 63
+        width: 156
+        height: 110
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b534cb6d6cd094e84927070bc68341f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minna_blocks_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 63
+        width: 64
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8a7f9200b8e4fbfb515502dedffdf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 074651b0c95be4fd5922403f17455740
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
