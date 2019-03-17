@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C1
   m_EditorClassIdentifier: 
   minWidth: 500
-  maxWidth: 800
+  maxWidth: 2000
   minHeight: 300
-  maxHeight: 500
+  maxHeight: 600
   style: 0
-  neighborhoods: 3
+  neighborhoods: 6
