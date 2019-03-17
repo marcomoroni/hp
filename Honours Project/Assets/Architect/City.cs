@@ -45,7 +45,7 @@ namespace Architect
 				Vector3 pos = new Vector3(
 					Random.Range(-6f, 6f),
 					0,
-					2.6f * i);
+					3.0f * i);
 
 				CreateNeighborhood(pos);
 			}

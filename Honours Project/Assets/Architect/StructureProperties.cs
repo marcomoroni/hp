@@ -17,7 +17,6 @@ namespace Architect
 
 		public StructureProperties(NeighborhoodProperties neighborhoodProperties, StructureType structureType)
 		{
-			Debug.Log(structureType);
 			height = UnityEngine.Random.Range(neighborhoodProperties.minHeight, neighborhoodProperties.maxHeight + 1);
 			//width = UnityEngine.Random.Range(1, 3 + 1);
 			/*if (structureType == StructureType.Empty)

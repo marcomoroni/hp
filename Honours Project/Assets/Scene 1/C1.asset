@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4814a6a9023d349a59c72c33a934ba, type: 3}
   m_Name: C1
   m_EditorClassIdentifier: 
-  minWidth: 500
-  maxWidth: 2000
-  minHeight: 300
-  maxHeight: 600
+  minWidth: 300
+  maxWidth: 600
+  minHeight: 200
+  maxHeight: 500
   style: 0
-  neighborhoods: 6
+  neighborhoods: 4
