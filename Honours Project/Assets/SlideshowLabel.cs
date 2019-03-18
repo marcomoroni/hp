@@ -12,7 +12,7 @@ public class SlideshowLabel : MonoBehaviour
 	{
 		text = GetComponent<TextMeshProUGUI>();
 		GameManager.slideshowModeChanged.AddListener(OnSlideshowModeChanged);
-		OnSlideshowModeChanged(false);
+		OnSlideshowModeChanged(GameManagerData.slideshowMode);
 	}
 
 	private void OnSlideshowModeChanged(bool mode)
