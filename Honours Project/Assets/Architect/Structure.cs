@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System;
 using System.Linq;
 
@@ -83,9 +83,10 @@ namespace Architect
 
 		private (GameObject, Block) CreateBlock(UnityEngine.Object blockPrefabVariant, int posY)
 		{
-			GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(blockPrefabVariant);
+			//GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(blockPrefabVariant);
+			GameObject go = Instantiate((GameObject)blockPrefabVariant, gameObject.transform);
 			go.name = ((GameObject)blockPrefabVariant).name;
-			go.transform.parent = this.gameObject.transform;
+			//go.transform.parent = this.gameObject.transform;
 			go.transform.position = go.transform.parent.transform.position + new Vector3(0, (float)posY / 100, 0);
 			Block block = go.GetComponent<Block>();
 
