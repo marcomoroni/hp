@@ -21,6 +21,7 @@ public class ValuesSceneManager : MonoBehaviour
 		cp.vegetation = int.Parse(values.vegetation.text);
 		cp.neighbourhoodXScatter = int.Parse(values.neighbourhoodXScatter.text);
 		cp.bridges = int.Parse(values.bridges.text);
+		cp.density = int.Parse(values.density.text);
 
 		// Generate
 		SceneManager.LoadScene(0);

@@ -15,6 +15,7 @@ public class ValuesController : MonoBehaviour
 	public InputField vegetation;
 	public InputField neighbourhoodXScatter;
 	public InputField bridges;
+	public InputField density;
 
     void Start()
     {
@@ -27,5 +28,6 @@ public class ValuesController : MonoBehaviour
 		vegetation.text = GameManagerData.cityProperties.vegetation.ToString();
 		neighbourhoodXScatter.text = GameManagerData.cityProperties.neighbourhoodXScatter.ToString();
 		bridges.text = GameManagerData.cityProperties.bridges.ToString();
+		density.text = GameManagerData.cityProperties.density.ToString();
 	}
 }

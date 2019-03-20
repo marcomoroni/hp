@@ -74,10 +74,10 @@ namespace Architect
 			switch (structureType)
 			{
 				case StructureType.Empty:
-					return UnityEngine.Random.Range(10, 50 + 1);
+					return UnityEngine.Random.Range(20, 70 + 1);
 
 				case StructureType.LongEmpty:
-					return UnityEngine.Random.Range(100, 200 + 1);
+					return UnityEngine.Random.Range(160, 320 + 1);
 			}
 
 

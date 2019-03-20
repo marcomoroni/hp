@@ -31,6 +31,8 @@ namespace Architect
 
 		public int bridges = 0; // 0 = normal
 
+		public int density = 0;
+
 
 		public void Randomize()
 		{

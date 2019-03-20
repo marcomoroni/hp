@@ -38,18 +38,24 @@ namespace Architect
 
 			// Vegetation
 			int vegetation = cityProperties.vegetation;
-			transitionMatrix[0][1] = Mathf.Max(0, 70 - vegetation);
 			transitionMatrix[0][4] = Mathf.Max(0, 20 + vegetation);
 			transitionMatrix[0][5] = Mathf.Max(0, 10 + vegetation);
-			transitionMatrix[3][1] = Mathf.Max(0, 60 - vegetation);
 			transitionMatrix[3][4] = Mathf.Max(0, 30 + vegetation);
 			transitionMatrix[3][5] = Mathf.Max(0, 10 + vegetation);
-			transitionMatrix[6][1] = Mathf.Max(0, 50 - vegetation);
 			transitionMatrix[6][4] = Mathf.Max(0, 10 + vegetation);
 			transitionMatrix[6][5] = Mathf.Max(0, 40 + vegetation);
 
 			// Bridges
 			transitionMatrix[1][2] = Mathf.Max(0, 20 + cityProperties.bridges);
+
+			// Density
+			int density = cityProperties.density;
+			transitionMatrix[1][3] = Mathf.Max(0, 20 + density);
+			transitionMatrix[1][6] = Mathf.Max(0, 10 + density);
+			transitionMatrix[4][3] = Mathf.Max(0, 80 + density);
+			transitionMatrix[4][6] = Mathf.Max(0, 20 + density);
+			transitionMatrix[5][3] = Mathf.Max(0, 30 + density);
+			transitionMatrix[5][6] = Mathf.Max(0, 70 + density);
 		}
 	}
 }
