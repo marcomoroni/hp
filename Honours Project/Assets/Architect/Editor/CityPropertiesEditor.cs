@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace Architect
+/*namespace Architect
 {
 	[CustomEditor(typeof(CityProperties))]
 	public class CityPropertiesEditor : Editor
@@ -25,4 +25,4 @@ namespace Architect
 			cityProperties = (CityProperties)target;
 		}
 	}
-}
+}*/

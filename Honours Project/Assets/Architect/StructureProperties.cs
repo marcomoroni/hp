@@ -34,6 +34,7 @@ namespace Architect
 			switch (structureType)
 			{
 				case StructureType.Generic:
+					axioms.Add(new SLS_F_Generic(this));
 					axioms.Add(new SLS_InsertGeneric());
 					axioms.Add(new SLS_F_Roof(this));
 					break;

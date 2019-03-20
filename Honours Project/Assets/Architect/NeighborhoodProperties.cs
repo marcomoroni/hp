@@ -11,7 +11,7 @@ namespace Architect
 		public int minHeight;
 		public int maxHeight;
 
-		public List<List<double>> transitionMatrix; // The probabilty of each row must sum to 1.0
+		public List<List<int>> transitionMatrix;
 
 		public List<StructureType> cannotEndWith = new List<StructureType>
 		{
@@ -24,17 +24,29 @@ namespace Architect
 			this.minHeight = cityProperties.minHeight;
 			this.maxHeight = cityProperties.maxHeight;
 
-			// TEMP: Default transition matrix
-			transitionMatrix = new List<List<double>>
+			// Default transition matrix (sum of each row is 100)
+			transitionMatrix = new List<List<int>>
 			{
-				new List<double> {0.0f, 0.7f, 0.0f, 0.0f, 0.2f, 0.1f, 0.0f},
-				new List<double> {0.0f, 0.5f, 0.2f, 0.2f, 0.0f, 0.0f, 0.1f},
-				new List<double> {0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f},
-				new List<double> {0.0f, 0.6f, 0.0f, 0.0f, 0.3f, 0.1f, 0.0f},
-				new List<double> {0.0f, 0.0f, 0.0f, 0.8f, 0.0f, 0.0f, 0.2f},
-				new List<double> {0.0f, 0.0f, 0.0f, 0.3f, 0.0f, 0.0f, 0.7f},
-				new List<double> {0.0f, 0.5f, 0.0f, 0.0f, 0.1f, 0.4f, 0.0f}
+				new List<int> {0, 70, 0, 0, 20, 10, 0},
+				new List<int> {0, 50, 20, 20, 0, 0, 10},
+				new List<int> {0, 100, 0, 0, 0, 0, 0},
+				new List<int> {0, 60, 0, 0, 30, 10, 0},
+				new List<int> {0, 0, 0, 80, 0, 0, 20},
+				new List<int> {0, 0, 0, 30, 0, 0, 70},
+				new List<int> {0, 50, 0, 0, 10, 40, 0}
 			};
+
+			// Vegetation
+			int vegetation = cityProperties.vegetation;
+			transitionMatrix[0][1] = Mathf.Max(0, 70 - vegetation);
+			transitionMatrix[0][4] = Mathf.Max(0, 20 + vegetation);
+			transitionMatrix[0][5] = Mathf.Max(0, 10 + vegetation);
+			transitionMatrix[3][1] = Mathf.Max(0, 60 - vegetation);
+			transitionMatrix[3][4] = Mathf.Max(0, 30 + vegetation);
+			transitionMatrix[3][5] = Mathf.Max(0, 10 + vegetation);
+			transitionMatrix[6][1] = Mathf.Max(0, 50 - vegetation);
+			transitionMatrix[6][4] = Mathf.Max(0, 10 + vegetation);
+			transitionMatrix[6][5] = Mathf.Max(0, 40 + vegetation);
 		}
 	}
 }

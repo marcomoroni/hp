@@ -66,7 +66,7 @@ namespace Architect
 						int heightRightRoof = structures[s + 1].Item2.blocks.Last().Item2.properties.height;
 
 						int maxHeight = Mathf.Min(heightLeft - heightLeftRoof, heightRight - heightRightRoof) - block.properties.height;
-						int newHeight = Mathf.Max(20, UnityEngine.Random.Range(0, maxHeight + 1));
+						int newHeight = Mathf.Max(0, UnityEngine.Random.Range(0, maxHeight + 1)); // 0 -> bridge can be on ground
 
 						//Debug.Log(heightLeft + " " + heightLeft + " " + maxHeight + " " + newHeight);
 

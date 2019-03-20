@@ -22,7 +22,7 @@ public class OverlayController : MonoBehaviour
 
 	IEnumerator FadeIn()
 	{
-		yield return new WaitForSeconds(2.0f);
+		yield return new WaitForSeconds(0.6f);
 
 		while (overlay.color.a < 1)
 		{
@@ -38,7 +38,7 @@ public class OverlayController : MonoBehaviour
 
 	IEnumerator FadeOut()
 	{
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(0.4f);
 
 		while (overlay.color.a > 0)
 		{

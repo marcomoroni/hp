@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using Architect;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class GameManager : MonoBehaviour
 			slideshowModeChanged.Invoke(GameManagerData.slideshowMode);
 		}
 
+		if (Input.GetKeyDown("v"))
+		{
+			SceneManager.LoadScene(1);
+		}
+
 		if (GameManagerData.slideshowMode && currentState == GameManagerStates.Normal)
 		{
 			slideshowTimer -= Time.deltaTime;
@@ -58,7 +64,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		//yield return new WaitUntil(() => { return Input.GetKeyDown("space"); }); // change to readytoexit
-		yield return new WaitForSeconds(4.0f);
+		yield return new WaitForSeconds(3.3f);
 		operation.allowSceneActivation = true;
 	}
 }
@@ -76,4 +82,5 @@ public static class GameManagerData
 	public static bool hideUI = false;
 
 	// City properties
+	public static CityProperties cityProperties = new CityProperties();
 }

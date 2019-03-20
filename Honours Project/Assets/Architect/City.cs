@@ -11,8 +11,8 @@ namespace Architect
 	[AddComponentMenu("Architect/City")]
 	public class City : MonoBehaviour
 	{
-		[Header("Properties")]
-		[Tooltip("Leave it null to create random properties.")]
+		//[Header("Properties")]
+		//[Tooltip("Leave it null to create random properties.")]
 		public CityProperties properties;
 
 		[Header("Prefabs")]
@@ -26,25 +26,25 @@ namespace Architect
 
 		private void Start()
 		{
-
+			properties = GameManagerData.cityProperties;
 			Generate();
 		}
 
 		public void Generate()
 		{
 			// If properties is null, generate random one
-			if (properties == null)
+			/*if (properties == null)
 			{
 				properties = ScriptableObject.CreateInstance<CityProperties>();
 				properties.Randomize();
-			}
+			}*/
 
 			// Generate neighborhoods
 			int numNeighbourhoods = UnityEngine.Random.Range(properties.minNeighbourhoods, properties.maxNeighbourhoods + 1);
 			for (int i = 0; i < numNeighbourhoods; i++)
 			{
 				Vector3 pos = new Vector3(
-					Random.Range(-6f, 6f),
+					Random.Range(-properties.neighbourhoodXScatter, properties.neighbourhoodXScatter),
 					0,
 					3.0f * i);
 
