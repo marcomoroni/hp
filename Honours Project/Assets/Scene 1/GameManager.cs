@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		//yield return new WaitUntil(() => { return Input.GetKeyDown("space"); }); // change to readytoexit
-		yield return new WaitForSeconds(7.0f);
+		yield return new WaitForSeconds(4.0f);
 		operation.allowSceneActivation = true;
 	}
 }
@@ -74,4 +74,6 @@ public static class GameManagerData
 {
 	public static bool slideshowMode = false;
 	public static bool hideUI = false;
+
+	// City properties
 }
