@@ -19,7 +19,7 @@ public class ValuesSceneManager : MonoBehaviour
 		cp.minHeight = int.Parse(values.minHeight.text);
 		cp.maxHeight = int.Parse(values.maxHeight.text);
 		cp.vegetation = int.Parse(values.vegetation.text);
-		cp.neighbourhoodXScatter = int.Parse(values.neighbourhoodXScatter.text);
+		cp.neighbourhoodXScatter = float.Parse(values.neighbourhoodXScatter.text);
 		cp.bridges = int.Parse(values.bridges.text);
 		cp.density = int.Parse(values.density.text);
 
