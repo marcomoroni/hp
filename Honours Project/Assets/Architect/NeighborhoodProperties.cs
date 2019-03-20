@@ -47,6 +47,9 @@ namespace Architect
 			transitionMatrix[6][1] = Mathf.Max(0, 50 - vegetation);
 			transitionMatrix[6][4] = Mathf.Max(0, 10 + vegetation);
 			transitionMatrix[6][5] = Mathf.Max(0, 40 + vegetation);
+
+			// Bridges
+			transitionMatrix[1][2] = Mathf.Max(0, 20 + cityProperties.bridges);
 		}
 	}
 }

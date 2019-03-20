@@ -14,6 +14,7 @@ public class ValuesController : MonoBehaviour
 	public InputField maxHeight;
 	public InputField vegetation;
 	public InputField neighbourhoodXScatter;
+	public InputField bridges;
 
     void Start()
     {
@@ -25,5 +26,6 @@ public class ValuesController : MonoBehaviour
 		maxHeight.text = GameManagerData.cityProperties.maxHeight.ToString();
 		vegetation.text = GameManagerData.cityProperties.vegetation.ToString();
 		neighbourhoodXScatter.text = GameManagerData.cityProperties.neighbourhoodXScatter.ToString();
+		bridges.text = GameManagerData.cityProperties.bridges.ToString();
 	}
 }

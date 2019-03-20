@@ -20,8 +20,18 @@ public class ValuesSceneManager : MonoBehaviour
 		cp.maxHeight = int.Parse(values.maxHeight.text);
 		cp.vegetation = int.Parse(values.vegetation.text);
 		cp.neighbourhoodXScatter = int.Parse(values.neighbourhoodXScatter.text);
+		cp.bridges = int.Parse(values.bridges.text);
 
 		// Generate
 		SceneManager.LoadScene(0);
+	}
+
+	public void Reset()
+	{
+		// Create new so it has default values
+		GameManagerData.cityProperties = new CityProperties();
+
+		// Reload this scene
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }

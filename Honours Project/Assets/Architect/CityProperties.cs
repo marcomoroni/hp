@@ -27,7 +27,9 @@ namespace Architect
 
 		public int vegetation = 0; // 0 normal
 
-		public float neighbourhoodXScatter = 6f;
+		public float neighbourhoodXScatter = 5f;
+
+		public int bridges = 0; // 0 = normal
 
 
 		public void Randomize()
