@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 			slideshowModeChanged.Invoke(GameManagerData.slideshowMode);
 		}
 
-		if (Input.GetKeyDown("v"))
+		if (Input.GetKeyDown("p"))
 		{
 			SceneManager.LoadScene(1);
 		}
