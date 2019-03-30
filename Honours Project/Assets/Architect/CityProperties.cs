@@ -10,7 +10,7 @@ namespace Architect
 		//[Tooltip("In pixels.")]
 		public int minWidth = 400;
 		//[Tooltip("In pixels.")]
-		public int maxWidth = 700;
+		public int maxWidth = 1000;
 
 		//[Tooltip("In pixels.")]
 		public int minHeight = 200;
@@ -23,9 +23,9 @@ namespace Architect
 		//public int neighborhoods = 5; // z-axis
 
 		public int minNeighbourhoods = 2;
-		public int maxNeighbourhoods = 20;
+		public int maxNeighbourhoods = 8;
 
-		public int vegetation = 20; // 0 normal
+		public int vegetation = 10; // 0 normal
 
 		public float neighbourhoodXScatter = 5f;
 

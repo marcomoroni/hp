@@ -5303,6 +5303,8 @@ MonoBehaviour:
   maxXPos: 5
   maxZoomIn: 4
   maxZoomOut: 6
+  maxFloatingDistance: {x: 2, y: 0, z: 0}
+  floatingSpeed: {x: 0.06, y: 0, z: 0.04}
 --- !u!4 &629886434
 Transform:
   m_ObjectHideFlags: 0
